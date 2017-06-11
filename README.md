@@ -11,6 +11,8 @@ Looking for supernovas in the night sky
 - [The Sky X with TPoint and Camera Add-Ons](http://www.bisque.com/sc/pages/TheSkyX-Professional-Edition.aspx)
 
 ### Telescope and Camera Control
+![Telescope and Camera Control](Flowcharts/TelCam Flowchart.png)
+
 
 ### Image Processing
 
