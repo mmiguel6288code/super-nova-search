@@ -12,7 +12,7 @@ Looking for supernovas in the night sky
 
 ### Telescope and Camera Control
 
-![Telescope and Camera Control](Flowcharts/TelCam Flowchart.png?raw=true)
+![Telescope and Camera Control](Flowcharts/TelCam%20Flowchart.png)
 
 
 ### Image Processing
