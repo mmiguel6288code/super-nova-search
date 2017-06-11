@@ -1,3 +1,13 @@
+'''
+Matthew Miguel
+mmiguel6288code@gmail.com
+https://github.com/mmiguel6288code/super-nova-search
+'''
+from __future__ import print_function
+from __future__ import division
+from __future__ import unicode_literals
+from __future__ import absolute_import 
+
 import TelCam_TSX
 
 tsx = TelCam_TSX.TSX()
