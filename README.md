@@ -33,7 +33,7 @@ tsx.scan_objects('''
 ''')
 ```
 
-![Telescope and Camera Control Flowchart](https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=TelCam%20Flowchart#Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fmmiguel6288code%2Fsuper-nova-search%2Fmaster%2FFlowcharts%2FTelCam%2520Flowchart)
+![Telescope and Camera Control Flowchart](Flowcharts/TelCam%20Flowchart.png)
 
 
 ### Image Processing
