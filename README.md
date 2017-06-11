@@ -8,6 +8,8 @@ Looking for supernovas in the night sky
 
 ### Software Environment
 - [Anaconda 2 or 3](https://www.continuum.io/downloads)
+  - If using python 2, may need to "pip install future"
+  
 - [The Sky X with TPoint and Camera Add-Ons](http://www.bisque.com/sc/pages/TheSkyX-Professional-Edition.aspx)
 
 ### Telescope and Camera Control
@@ -15,7 +17,7 @@ TelCam_TSX.py: General functionalities to perform Telescope and Camera Control
 
 Example usage:
 ```python
-from TelCam_TSX import TSX
+from supernovasearch.TelCam_TSX import TSX
 
 t = TSX()
 tsx.configure_camera(

@@ -4,7 +4,12 @@ mmiguel6288code@gmail.com
 https://github.com/mmiguel6288code/super-nova-search
 '''
 from __future__ import absolute_import, division, print_function
-from builtins import (bytes, str, open, super, range, zip, round, input, int, pow, object)   
+from builtins import (bytes, str, open, super, range, zip, round, input, int, pow, object)
+try:
+  basestring
+except NameError:
+  basestring = str
+  
 
 from win32com.client import Dispatch, pywintypes
 import os, traceback, pdb, sys, time, os.path
@@ -130,7 +135,7 @@ class TSX(object):
         with task_status('Taking image'):
             self.TSX_Camera.TakeImage()
     def scan_objects(self,objects,check_starchart=True):
-        if isinstance(objects,str):
+        if isinstance(objects,basestring):
             objects = [i for i in [i.strip() for i in objects.split('\n')] if i != '']
         if check_starchart:
             with task_status('Checking existence of all objects to be scanned in StarChart'):
@@ -153,27 +158,6 @@ class OI(object):
         
 
         
-if __name__ == '__main__':
-    tsx = TSX()
-    tsx.configure_camera(
-        frame=1,
-        img_reduc=1,
-        binning=(1,1),
-        expo_time=1,
-        delay=1,
-        img_series=1
-        )
-        
-    tsx.camera_autosave(
-        do_autosave=True,
-        save_path='local/images',
-        prefix='TSX_'
-    )
-    
-    tsx.scan_objects('''
-        Mars
-        NGC2985
-        Regulus
-    ''')
+
     
     

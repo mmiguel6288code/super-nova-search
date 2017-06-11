@@ -6,9 +6,9 @@ https://github.com/mmiguel6288code/super-nova-search
 from __future__ import absolute_import, division, print_function
 from builtins import (bytes, str, open, super, range, zip, round, input, int, pow, object)   
 
-from .context import TelCam_TSX
+from .context import supernovasearch
 
-tsx = TelCam_TSX.TSX()
+tsx = supernovasearch.TelCam_TSX.TSX()
 tsx.configure_camera(
     frame=1,
     img_reduc=1,

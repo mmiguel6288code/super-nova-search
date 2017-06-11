@@ -36,9 +36,14 @@
 ehthumbs.db
 Thumbs.db
 
-#Project specific#
-##################
-local/*
+
+#Python#
+########
 */__pycache__/*
 */__pycache__
 __pycache__
+*.pyc
+
+#Project specific#
+##################
+local/*
