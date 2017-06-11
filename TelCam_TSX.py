@@ -3,13 +3,11 @@ Matthew Miguel
 mmiguel6288code@gmail.com
 https://github.com/mmiguel6288code/super-nova-search
 '''
-from __future__ import print_function
-from __future__ import division
-from __future__ import unicode_literals
-from __future__ import absolute_import 
+from __future__ import absolute_import, division, print_function
+from builtins import (bytes, str, open, super, range, zip, round, input, int, pow, object)   
 
 from win32com.client import Dispatch, pywintypes
-import os, traceback, pdb, sys, time
+import os, traceback, pdb, sys, time, os.path
 from contextlib import contextmanager
 
 os.environ['PYTHONINSPECT'] = '1'
@@ -117,6 +115,11 @@ class TSX(object):
                 
             if img_series != None:
                 self.TSX_Camera.Series = img_series
+    
+    def camera_autosave(self,do_autosave=True,save_path='local/images',prefix='TSX_'):
+        self.TSX_Camera.AutoSaveOn = do_autosave
+        self.TSX_Camera.AutoSavePath = os.path.realpath(save_path)
+        self.TSX_Camera.AutoSavePrefix = prefix
 
             
     def sync(self,ra,dec,obj):
@@ -156,19 +159,21 @@ if __name__ == '__main__':
         frame=1,
         img_reduc=1,
         binning=(1,1),
-        expo_time=30,
-        delay=5,
+        expo_time=1,
+        delay=1,
         img_series=1
         )
         
-   
-    tsx.slew(obj='Regulus')
-    tsx.take_image()
+    tsx.camera_autosave(
+        do_autosave=True,
+        save_path='local/images',
+        prefix='TSX_'
+    )
     
-    tsx.slew(ra=7.5047,dec=45.662)
-    tsx.take_image()
-    
-    tsx.slew(obj='Mars')
-    tsx.take_image()
+    tsx.scan_objects('''
+        Mars
+        NGC2985
+        Regulus
+    ''')
     
     
