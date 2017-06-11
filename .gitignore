@@ -39,3 +39,6 @@ Thumbs.db
 #Project specific#
 ##################
 local/*
+*/__pycache__/*
+*/__pycache__
+__pycache__
