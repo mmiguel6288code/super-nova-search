@@ -43,6 +43,7 @@ h5py==2.6.0
 HeapDict==1.0.0
 idna==2.2
 imagesize==0.7.1
+imreg-dft==2.0.0
 ipykernel==4.5.2
 ipython==5.1.0
 ipython-genutils==0.1.0
@@ -78,6 +79,7 @@ numexpr==2.6.1
 numpy==1.11.3
 numpydoc==0.6.0
 odo==0.5.0
+olefile==0.44
 openpyxl==2.4.1
 pandas==0.19.2
 partd==0.3.7

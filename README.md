@@ -15,7 +15,7 @@ Looking for supernovas in the night sky
 ### Telescope and Camera Control
 TelCam_TSX.py: General functionalities to perform Telescope and Camera Control
 
-Example usage:
+Example usage: Scanning a set of targets
 ```python
 from supernovasearch.TelCam_TSX import TSX
 
@@ -46,15 +46,39 @@ tsx.scan_objects('''
 
 ### Image Processing
 
+ImgProc.py: General functionalities to perform image processing
+
+Example Usage: Creating reference images
+```
+#First scan desired targets using TelCam_TSX
+#Then do:
+
+from supernovasearch.ImgProc import copy_to_reference
+copy_to_reference(2017,6,11) #leave arguments empty for current date
+```
+
+Example Usage: Supernova Search image processing
+```
+#First create reference images
+#Then do:
+from supernovasearch.ImgProc import process_images
+process_images(2017,6,11) #leave arguments empty for current date
+```
+
 ![Image Processing Flowchart](Flowcharts/ImgProc%20Flowchart.png)
 
 Filename/Folder structure:
-  * FITS file name structure (capture or delta): <prefix>.<img_number>.<object_name>.fit
-  * FITS file name structure (reference): <prefix>.reference.<object_name>.fit
+  * `FITS file name structure (capture or delta): <prefix>.<img_number>.<object_name>.fit`
+  * `FITS file name structure (reference): <prefix>.reference.<object_name>.fit`
   * Folder Structure:
     * `local/images/reference/<fits files>`
     * `local/images/capture/<Month-Day-Year>/<fits files>`
     * `local/images/delta/<Month-Day-Year>/<fits files>`
+    * `local/detection_logs/<Month-Day-Year>/<log files>`
+
+Image Registration performed via [imreg_dft](https://pypi.python.org/pypi/imreg_dft/)
+
+Source Detection performed via [photutils.detection](http://photutils.readthedocs.io/en/stable/photutils/detection.html) (DAOStarFinder)
     
   
 
