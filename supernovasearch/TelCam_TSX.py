@@ -111,7 +111,7 @@ class TSX(object):
             if img_series != None:
                 self.TSX_Camera.Series = img_series
     
-    def camera_autosave(self,do_autosave=True,save_path='local/images',prefix='TSX_'):
+    def camera_autosave(self,do_autosave=True,save_path='local/images/capture',prefix='TSX_'):
         self.TSX_Camera.AutoSaveOn = do_autosave
         self.TSX_Camera.AutoSavePath = os.path.realpath(save_path)
         self.TSX_Camera.AutoSavePrefix = prefix

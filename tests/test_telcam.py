@@ -20,8 +20,8 @@ tsx.configure_camera(
     
 tsx.camera_autosave(
     do_autosave=True,
-    save_path='local/images',
-    prefix='test_telcam_'
+    save_path='local/images/capture',
+    prefix='test_telcam'
 )
 
 tsx.scan_objects('''
