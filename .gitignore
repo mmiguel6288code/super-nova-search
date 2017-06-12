@@ -35,7 +35,7 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
-
+.thumbs/*
 
 #Python#
 ########
@@ -47,3 +47,5 @@ __pycache__
 #Project specific#
 ##################
 local/*
+*.fit
+*.FIT
