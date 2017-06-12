@@ -49,11 +49,11 @@ tsx.scan_objects('''
 ![Image Processing Flowchart](Flowcharts/ImgProc%20Flowchart.png)
 
 Filename/Folder structure:
-  *FITS file name structure: <prefix>.<img_number>.<object_name>.fit
-  *Folder Structure:
-    *local/images/reference/<fits files>
-    *local/images/capture/<Month-Day-Year>/<fits files>
-    *local/images/delta/<Month-Day-Year>/<fits files>
+  * FITS file name structure: <prefix>.<img_number>.<object_name>.fit
+  * Folder Structure:
+    * local/images/reference/<fits files>
+    * local/images/capture/<Month-Day-Year>/<fits files>
+    * local/images/delta/<Month-Day-Year>/<fits files>
     
   
 
