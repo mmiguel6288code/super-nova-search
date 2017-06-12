@@ -12,23 +12,13 @@ except NameError:
   
 
 from win32com.client import Dispatch, pywintypes
-import os, traceback, pdb, sys, time, os.path
-from contextlib import contextmanager
+import os, traceback, pdb, sys, os.path
+
+from .utils import task_status
+
+
 
 os.environ['PYTHONINSPECT'] = '1'
-
-verbose = True
-
-@contextmanager
-def task_status(*status):
-    status = ' '.join(str(s) for s in status)
-    t = time.time()
-    if verbose:
-        print('Start:',status+'...')
-    yield
-    if verbose:
-        print('  Done:',status,';','%0.3f' % (time.time()-t),'seconds')
-    
     
     
 class TSX(object):
