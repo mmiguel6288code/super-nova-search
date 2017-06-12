@@ -49,7 +49,7 @@ tsx.scan_objects('''
 ImgProc.py: General functionalities to perform image processing
 
 Example Usage: Creating reference images
-```
+```python
 #First scan desired targets using TelCam_TSX
 #Then do:
 
@@ -58,7 +58,7 @@ copy_to_reference(2017,6,11) #leave arguments empty for current date
 ```
 
 Example Usage: Supernova Search image processing
-```
+```python
 #First create reference images
 #Then do:
 from supernovasearch.ImgProc import process_images
