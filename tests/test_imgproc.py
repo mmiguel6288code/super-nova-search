@@ -8,4 +8,4 @@ from builtins import (bytes, str, open, super, range, zip, round, input, int, po
 
 from .context import supernovasearch
 
-supernovasearch.ImgProc.process_images()
+supernovasearch.ImgProc.process_images(basedir='local/test_images',only_new=False)
